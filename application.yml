@@ -1,0 +1,26 @@
+cadence:
+  url: "https://apps.lrs.lt/sip/p2b.ad_seimo_kadencijos"
+spring:
+  application:
+    name: "Pocket Seimas"
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # Options: update, create, create-drop (best for dev)
+    show-sql: true
+
+logging:
+  file:
+    name: "logs/app.log"
+  level:
+    root: INFO
+    com.pocketseimas: DEBUG
+
+server:
+  error:
+    whitelabel:
+      enabled: false
