@@ -29,7 +29,7 @@ dependencies {
 
     // Data and ORM
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    runtimeOnly("com.h2database:h2") // H2 database for development (replace with your production DB driver later)
+    runtimeOnly("org.postgresql:postgresql")
 
 
     // Security
