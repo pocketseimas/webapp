@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.core.errorhandling
+package com.pocketseimas.webapp.core.errorhandling
 
 import com.fasterxml.jackson.core.JsonParseException
 import org.slf4j.LoggerFactory
@@ -42,20 +42,5 @@ class GlobalExceptionHandler {
             path = servletRequest.request.requestURI
         )
         return ResponseEntity(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR)
-    }
-
-    @ExceptionHandler(InvalidApiKeyException::class)
-    fun handleInvalidApiKey(ex: InvalidApiKeyException, request: WebRequest): ResponseEntity<ErrorResponse> {
-        logger.error("Invalid API key: ${ex.message}", ex)
-        val servletRequest = request as ServletWebRequest
-        val errorResponse = ErrorResponse(
-            status = HttpStatus.UNAUTHORIZED.value(),
-            error = "Unauthorized API Key",
-            message = ex.message,
-            cause = ex.cause?.toString(),
-            stackTrace = ex.stackTrace.joinToString("\n"),
-            path = servletRequest.request.requestURI
-        )
-        return ResponseEntity(errorResponse, HttpStatus.UNAUTHORIZED)
     }
 }

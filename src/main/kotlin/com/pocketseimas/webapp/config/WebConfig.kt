@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.config
+package com.pocketseimas.webapp.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.converter.HttpMessageConverter

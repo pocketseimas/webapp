@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.cadence
+package com.pocketseimas.webapp.cadence
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.stereotype.Component

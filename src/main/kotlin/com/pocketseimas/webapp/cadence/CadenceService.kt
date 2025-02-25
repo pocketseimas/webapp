@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.cadence
+package com.pocketseimas.webapp.cadence
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper
 import org.springframework.cache.annotation.Cacheable

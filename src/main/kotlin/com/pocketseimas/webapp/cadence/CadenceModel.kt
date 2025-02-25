@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.cadence
+package com.pocketseimas.webapp.cadence
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty

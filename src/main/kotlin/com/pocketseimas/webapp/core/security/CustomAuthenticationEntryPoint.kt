@@ -1,7 +1,7 @@
-package com.pocketseimas.pocketseimas.core.security
+package com.pocketseimas.webapp.core.security
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.pocketseimas.pocketseimas.core.errorhandling.ErrorResponse
+import com.pocketseimas.webapp.core.errorhandling.ErrorResponse
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.http.HttpStatus

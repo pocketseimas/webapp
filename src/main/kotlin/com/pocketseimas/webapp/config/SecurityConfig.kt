@@ -1,7 +1,7 @@
-package com.pocketseimas.pocketseimas.config
+package com.pocketseimas.webapp.config
 
-import com.pocketseimas.pocketseimas.core.security.ApiKeyAuthFilter
-import com.pocketseimas.pocketseimas.core.security.CustomAuthenticationEntryPoint
+import com.pocketseimas.webapp.core.security.ApiKeyAuthFilter
+import com.pocketseimas.webapp.core.security.CustomAuthenticationEntryPoint
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.Customizer

@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas
+package com.pocketseimas.webapp
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication

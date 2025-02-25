@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.core.security
+package com.pocketseimas.webapp.core.security
 
 import org.springframework.data.jpa.repository.JpaRepository
 

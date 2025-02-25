@@ -1,3 +1,3 @@
-package com.pocketseimas.pocketseimas.core.errorhandling
+package com.pocketseimas.webapp.core.errorhandling
 
 class InvalidApiKeyException(message: String) : RuntimeException(message)

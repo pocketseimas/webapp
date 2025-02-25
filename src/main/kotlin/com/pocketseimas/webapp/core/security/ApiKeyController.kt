@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.core.security
+package com.pocketseimas.webapp.core.security
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping

@@ -1,4 +1,4 @@
-package com.pocketseimas.pocketseimas.config
+package com.pocketseimas.webapp.config
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
