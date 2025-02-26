@@ -43,4 +43,19 @@ class GlobalExceptionHandler {
         )
         return ResponseEntity(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR)
     }
+
+    @ExceptionHandler(ActiveApiKeyExistsException::class)
+    fun handleActiveApiKeyExists(ex: ActiveApiKeyExistsException, request: WebRequest): ResponseEntity<ErrorResponse> {
+        logger.error("Handling ActiveApiKeyExists: ${ex.message}", ex)
+        val servletRequest = request as ServletWebRequest
+        val errorResponse = ErrorResponse(
+            status = HttpStatus.UNAUTHORIZED.value(),
+            error = "Unauthorized due to existing API key for this device ID.",
+            message = ex.message,
+            cause = ex.cause?.toString(),
+            stackTrace = ex.stackTrace.joinToString("\n"),
+            path = servletRequest.request.requestURI
+        )
+        return ResponseEntity(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR)
+    }
 }

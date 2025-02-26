@@ -35,3 +35,19 @@ server:
   error:
     whitelabel:
       enabled: false
+
+
+bucket4j:
+  enabled: true
+  filters:
+    - cache-name: buckets
+      url: .*
+      http-methods: [GET, POST, PUT, DELETE]
+      rate-limits:
+        - condition: "#request.getHeader('X-API-KEY') != null"
+          key-filter-expression: "#request.getHeader('X-API-KEY')"
+          limits:
+            - bandwidths:
+                - capacity: 5
+                  time: 1
+                  unit: minutes

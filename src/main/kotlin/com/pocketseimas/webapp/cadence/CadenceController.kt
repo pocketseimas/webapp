@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 class CadenceController(private val cadenceService: CadenceService) {
 
     @Operation(summary = "Get all cadences", description = "Returns a list of Seimas cadences as JSON.")
-    @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
+    @GetMapping()
     fun getCadences(): ResponseEntity<CadenceSeimasInfo> {
         val info: CadenceSeimasInfo? = cadenceService.getCadences()
         return if (info != null) {
